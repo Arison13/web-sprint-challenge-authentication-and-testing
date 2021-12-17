@@ -21,6 +21,7 @@ const validateUsername = async (req, res, next) => {
     next({ status: 401, message: "username and password required" });
   } else {
     const duplicateUsername = await Users.findBy({ username: username });
+
     if (duplicateUsername) {
       next({
         status: 422,
