@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs");
-const { tokenBuilder } = require("./../auth/tokenbuilder");
+const { tokenBuilder } = require("../auth/token-builder");
 const Users = require("./../users/users-model");
 
 const checkUsernameExists = async (req, res, next) => {
